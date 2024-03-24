@@ -82,7 +82,7 @@ const Contact = ({ classicHeader, darkTheme }) => {
         {/* Heading end*/}
         <div className="row gy-5">
           {/* contact details */}
-          <div className="col-md-4 col-xl-3 order-1 order-md-0 text-center text-md-start">
+          <div className="col-md-5 col-xl-4 order-1 order-md-0 text-center text-md-start">
             <h2
               className={
                 "mb-3 text-5 text-uppercase " + (darkTheme ? "text-white" : "")
@@ -92,15 +92,19 @@ const Contact = ({ classicHeader, darkTheme }) => {
             </h2>
             <p className={"text-3 mb-1 " + (darkTheme ? "text-light" : "")}>
               <span className="text-primary text-5 me-2">
-                <i className="fa-brands fa-square-whatsapp"/>
+                <i className="fa-brands fa-square-whatsapp" />
               </span>
-              (034) 644 469 610
+              <a href="https://wa.me/34644469610" target="_blank" rel="noopener noreferrer" style={{ color: 'black' }}>
+                (034) 644 469 610
+              </a>
             </p>
             <p className={"text-3 mb-4 " + (darkTheme ? "text-light" : "")}>
               <span className="text-primary text-4 me-2">
                 <i className="fas fa-envelope" />
               </span>
-              claudia.vasquez.as@gmail.com
+              <a href="mailto:claudia.vasquez.as@gmail.com" className="text-dark">
+                claudia.vasquez.as@gmail.com
+              </a>
             </p>
             <h2
               className={
@@ -126,7 +130,7 @@ const Contact = ({ classicHeader, darkTheme }) => {
                   </a>
                 </Tooltip>
               </li>
-              
+
               <li className="social-icons-github">
                 <Tooltip text="Github" placement="top">
                   <a
@@ -141,14 +145,14 @@ const Contact = ({ classicHeader, darkTheme }) => {
             </ul>
           </div>
           {/* contact form */}
-          <div className="col-md-8 col-xl-9 order-0 order-md-1">
+          <div className="col-md-7 col-xl-8 order-0 order-md-1">
             <h2
               className={
                 "mb-3 text-5 text-uppercase text-center text-md-start " +
                 (darkTheme ? "text-white" : "")
               }
             >
-              Let's build something toguether!
+              Let's build something together!
             </h2>
             <form
               className={darkTheme ? "form-dark" : ""}
@@ -183,7 +187,7 @@ const Contact = ({ classicHeader, darkTheme }) => {
                     className="form-control"
                     rows={5}
                     required
-                    placeholder="Tell us more about your needs........"
+                    placeholder="Tell me more!"
                     defaultValue={""}
                   />
                 </div>

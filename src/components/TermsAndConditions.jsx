@@ -19,7 +19,7 @@ const TermsAndConditions = ({ darkTheme }) => {
         >
           <div className="modal-header">
             <h5 className={"modal-title " + (darkTheme ? "text-white" : "")}>
-              Terms &amp; Policy
+              Terms &amp; Conditions
             </h5>
             <button
               type="button"
@@ -29,89 +29,48 @@ const TermsAndConditions = ({ darkTheme }) => {
             />
           </div>
           <div className="modal-body p-4">
-            <p>
-              Simply dummy text of the printing and typesetting industry. Lorem
-              Ipsum has been the industry's standard dummy text ever since the
-              1500s, when an unknown printer took a galley of type and scrambled
-              it to make a type specimen book. It has survived not only five
-              centuries, but also the leap into electronic typesetting,
-              remaining essentially unchanged.
-            </p>
-            <h3 className={"mb-3 mt-4 mt-4 " + (darkTheme ? "text-white" : "")}>
-              Terms of Use
+            <h3 className={"mb-3 " + (darkTheme ? "text-white" : "")}>
+              Use of the Website
             </h3>
             <p>
-              It has survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged. Simply
-              dummy text of the printing and typesetting industry.
+              By accessing this website, you agree to comply with these terms
+              and conditions of use. If you disagree with any part of these
+              terms and conditions, please do not use our website.
             </p>
-            <h5 className={"text-4 mt-4 " + (darkTheme ? "text-white" : "")}>
-              Part I – Information Simone collects and controls
-            </h5>
+            <h3 className={"mb-3 " + (darkTheme ? "text-white" : "")}>
+              Intellectual Property
+            </h3>
             <p>
-              Lorem Ipsum has been the industry's standard dummy text ever since
-              the 1500s, when an unknown printer took a galley of type and
-              scrambled it to make a type specimen book.
+              This website and its content are the property of Claudia Vásquez and are protected by intellectual property laws. You may
+              not reproduce, distribute, or exploit any content from this
+              website without our express written permission.
             </p>
-            <h5 className={"text-4 mt-4 " + (darkTheme ? "text-white" : "")}>
-              Part II – Information that Simone processes on your behalf
-            </h5>
-            <p>
-              Lorem Ipsum has been the industry's standard dummy text ever since
-              the 1500s, when an unknown printer took a galley of type and
-              scrambled it to make a type specimen book.
-            </p>
-            <h5 className={"text-4 mt-4 " + (darkTheme ? "text-white" : "")}>
-              Part III – General
-            </h5>
-            <p>
-              It has survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged. Lorem
-              Ipsum has been the industry's standard dummy text ever since the
-              1500s, when an unknown printer took a galley of type and scrambled
-              it to make a type specimen book.
-            </p>
-            <h3 className={"mb-3 mt-4 " + (darkTheme ? "text-white" : "")}>
+            <h3 className={"mb-3 " + (darkTheme ? "text-white" : "")}>
               Privacy Policy
             </h3>
             <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book.
+              Our privacy policy outlines how we collect, use, and protect your
+              personal information in compliance with the General Data
+              Protection Regulation (GDPR) of the European Union.
             </p>
-            <ol className="lh-lg">
-              <li>
-                Lisque persius interesset his et, in quot quidam persequeris
-                vim, ad mea essent possim iriure.
-              </li>
-              <li>
-                Quidam lisque persius interesset his et, Lisque persius
-                interesset his et, in quot quidam persequeris vim, ad mea essent
-                possim iriure.
-              </li>
-              <li>
-                In quot quidam persequeris vim, ad mea essent possim iriure.
-                Quidam lisque persius interesset his et.
-              </li>
-              <li>
-                Quidam lisque persius interesset his et, Lisque persius
-                interesset his et.
-              </li>
-              <li>
-                Interesset his et, Lisque persius interesset his et, in quot
-                quidam persequeris vim, ad mea essent possim iriure.
-              </li>
-              <li>
-                Persius interesset his et, Lisque persius interesset his et, in
-                quot quidam persequeris vim, ad mea essent possim iriure.
-              </li>
-              <li>
-                Quot quidam persequeris vim Quidam lisque persius interesset his
-                et, Lisque persius interesset his et, in quot quidam persequeris
-                vim, ad mea essent possim iriure.
-              </li>
-            </ol>
+            <h3 className={"mb-3 " + (darkTheme ? "text-white" : "")}>
+              Limitation of Liability
+            </h3>
+            <p>
+              We are not liable for any damages or losses resulting from your
+              use of this website. This includes, but is not limited to,
+              direct, indirect, incidental, consequential, and punitive
+              damages.
+            </p>
+            <h3 className={"mb-3 " + (darkTheme ? "text-white" : "")}>
+              Governing Law and Jurisdiction
+            </h3>
+            <p>
+              These terms and conditions are governed by the laws of Spain and
+              the regulations of the European Union. Any disputes relating to
+              these terms and conditions will be subject to the exclusive
+              jurisdiction of the courts of Spain.
+            </p>
           </div>
         </div>
       </div>
@@ -120,3 +79,4 @@ const TermsAndConditions = ({ darkTheme }) => {
 };
 
 export default TermsAndConditions;
+

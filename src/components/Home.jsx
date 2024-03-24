@@ -44,7 +44,7 @@ const Home = ({ classicHeader, darkTheme, handleNavClick }) => {
                   />
                 </h2>
                 <p className="text-5 text-light mb-4">
-                  based in Murcia, Spain.
+                  based in Spain.
                 </p>
                 <a
                   href="#contact"

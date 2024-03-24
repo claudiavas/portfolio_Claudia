@@ -19,7 +19,7 @@ const Disclaimer = ({ darkTheme }) => {
         >
           <div className="modal-header">
             <h5 className={"modal-title " + (darkTheme ? "text-white" : "")}>
-              Copyright &amp; Disclaimer
+              Disclaimer
             </h5>
             <button
               type="button"
@@ -30,43 +30,20 @@ const Disclaimer = ({ darkTheme }) => {
           </div>
           <div className="modal-body p-4">
             <p>
-              Simply dummy text of the printing and typesetting industry. Lorem
-              Ipsum has been the industry's standard dummy text ever since the
-              1500s, when an unknown printer took a galley of type and scrambled
-              it to make a type specimen book.
+              The information provided on this website is for general
+              informational purposes only. While we strive to keep the
+              information up to date and correct, we make no representations or
+              warranties of any kind, express or implied, about the
+              completeness, accuracy, reliability, suitability, or availability
+              with respect to the website or the information, products,
+              services, or related graphics contained on the website for any
+              purpose. Any reliance you place on such information is therefore
+              strictly at your own risk.
             </p>
-            <ul className="lh-lg">
-              <li>
-                Lisque persius interesset his et, in quot quidam persequeris
-                vim, ad mea essent possim iriure.
-              </li>
-              <li>
-                Quidam lisque persius interesset his et, Lisque persius
-                interesset his et, in quot quidam persequeris vim, ad mea essent
-                possim iriure.
-              </li>
-              <li>
-                In quot quidam persequeris vim, ad mea essent possim iriure.
-                Quidam lisque persius interesset his et.
-              </li>
-              <li>
-                Quidam lisque persius interesset his et, Lisque persius
-                interesset his et.
-              </li>
-              <li>
-                Interesset his et, Lisque persius interesset his et, in quot
-                quidam persequeris vim, ad mea essent possim iriure.
-              </li>
-              <li>
-                Persius interesset his et, Lisque persius interesset his et, in
-                quot quidam persequeris vim, ad mea essent possim iriure.
-              </li>
-              <li>
-                Quot quidam persequeris vim Quidam lisque persius interesset his
-                et, Lisque persius interesset his et, in quot quidam persequeris
-                vim, ad mea essent possim iriure.
-              </li>
-            </ul>
+            <p>
+              In no event will we be liable for any loss or damage arising from
+              the use of this website.
+            </p>
           </div>
         </div>
       </div>
