@@ -100,7 +100,7 @@ const Contact = ({ classicHeader, darkTheme }) => {
               <span className="text-primary text-4 me-2">
                 <i className="fas fa-envelope" />
               </span>
-              contact@claudiavasquez.dev
+              claudia.vasquez.as@gmail.com
             </p>
             <h2
               className={
