@@ -1,9 +1,15 @@
 import React from "react";
 
+import image1 from "../images/about/chapter1.png";
+
+
 const AboutMe = ({ classicHeader, darkTheme }) => {
+
+ 
+
   const chapters = [
     {
-      src: "images/about/chapter1.png",
+      src: image1,
       title: "Fearless Beginner",
       content: "After high school, I completed a year-long programming course. A world full of challenges awaited me!"
     },
