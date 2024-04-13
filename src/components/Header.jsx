@@ -8,7 +8,7 @@ const Header = ({ classicHeader, darkTheme, homeRef, handleNavClick }) => {
     <header id="header" className="sticky-top">
       {/* Navbar */}
       <nav className="primary-menu navbar navbar-expand-lg navbar-dark bg-dark border-bottom-0">
-        <div className="container-fluid position-relative h-100 flex-lg-column ps-3 px-lg-3 pt-lg-3 pb-lg-2">
+        <div className="container-fluid position-relative h-100 flex-lg-column ps-3 px-lg-3 pt-lg-3 pb-lg-2, alignItems: 20">
           {/* Logo */}
           <Link
             smooth
@@ -21,17 +21,20 @@ const Header = ({ classicHeader, darkTheme, homeRef, handleNavClick }) => {
               setIsNavModalClose(true);
             }}
           >
-            <span className="bg-dark-2 rounded-pill p-2 mb-lg-1 d-none d-lg-inline-block">
-              <img
-                className="img-fluid rounded-pill d-block"
-                src="images/profile.jpg"
-                title="I'm Claudia"
-                alt="profile"
-              />
-            </span>
-            <h1 className="text-5 text-white text-center mb-0 d-lg-block">
-              Claudia Vásquez
-            </h1>
+            <div styles={{justifyItems: "center"}}>
+              <span className="bg-dark-2 rounded-pill p-2 mb-lg-1 d-none d-lg-inline-block">
+                <img
+                  className="img-fluid rounded-pill d-block"
+                  src="images/profile.jpg"
+                  title="I'm Claudia"
+                  alt="profile"
+                  style={{ maxWidth: "150px", height: "auto" }}
+                />
+              </span>
+              <h1 className="text-5 text-white text-center mb-0 d-lg-block">
+                Claudia Vásquez
+              </h1>
+            </div>
           </Link>
           {/* Logo End */}
           <div
@@ -139,7 +142,7 @@ const Header = ({ classicHeader, darkTheme, homeRef, handleNavClick }) => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <i className="fab fa-linkedin" />
+                  <i className="fab fa-linkedin" style={{ fontSize: "20px" }} />
                 </a>
               </Tooltip>
             </li>
@@ -150,7 +153,7 @@ const Header = ({ classicHeader, darkTheme, homeRef, handleNavClick }) => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <i className="fab fa-github" />
+                  <i className="fab fa-github" style={{ fontSize: "20px" }} />
                 </a>
               </Tooltip>
             </li>

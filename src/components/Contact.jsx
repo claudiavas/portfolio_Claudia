@@ -126,7 +126,7 @@ const Contact = ({ classicHeader, darkTheme }) => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <i className="fab fa-linkedin" />
+                    <i className="fab fa-linkedin" style={{ fontSize: "20px" }}/>
                   </a>
                 </Tooltip>
               </li>
@@ -138,7 +138,7 @@ const Contact = ({ classicHeader, darkTheme }) => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <i className="fab fa-github" />
+                    <i className="fab fa-github" style={{ fontSize: "20px" }}/>
                   </a>
                 </Tooltip>
               </li>

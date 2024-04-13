@@ -1,11 +1,15 @@
 import React from "react";
 
 import image1 from "../images/about/chapter1.png";
+import image2 from "../images/about/chapter2.png";
+import image3 from "../images/about/chapter3.png";
+import image4 from "../images/about/chapter4.png";
+import image5 from "../images/about/chapter5.png";
 
 
 const AboutMe = ({ classicHeader, darkTheme }) => {
 
- 
+
 
   const chapters = [
     {
@@ -14,28 +18,28 @@ const AboutMe = ({ classicHeader, darkTheme }) => {
       content: "After high school, I completed a year-long programming course. A world full of challenges awaited me!"
     },
     {
-      src: "images/about/chapter2.png",
+      src: image2,
       title: "Academic Adventures",
       content: "I enrolled in a prestigious university for Business Administration. A journey full of strategy and learning!"
     },
     {
-      src: "images/about/chapter3.png",
+      src: image3,
       title: "The Multifaceted Expert",
       content: "With over 20 years of experience in Finance and Human Resources, I became a master of multitasking."
     },
     {
-      src: "images/about/chapter4.png",
+      src: image4,
       title: "The Efficient Implementer",
       content: "During years problem-solving with an IT mindset, I implemented numerous systems."
     },
     {
-      src: "images/about/chapter5.png",
+      src: image5,
       title: "Techvolutionary Leap",
       content: "Never too late! Embraced Full Stack dev and never looked back!"
     }
   ];
 
- 
+
   return (
     <section
       id="about"
@@ -72,28 +76,30 @@ const AboutMe = ({ classicHeader, darkTheme }) => {
               {chapters.length > 0 &&
                 chapters.map((chapter, index) => (
                   <div className="col-md-12" key={index}>
-                    <div className="featured-box style-3 mb-5" style={{display: "flex", flexDirection: "column", justifyContent: "center"}}>
+                    <div className="featured-box style-3 mb-5" style={{ display: "flex", flexDirection: "column", justifyContent: "center", height: "80"}}>
                       <div
                         className={
                           "featured-box-icon text-primary" +
                           (darkTheme ? "bg-dark-1" : "bg-white")
                         }
                       >
-                          <img
-                            className="img-fluid d-inline-block w-auto"
-                            src={chapter.src}
-                            alt=""
-                          />
-                        
+                        <img
+                          className="img-fluid d-inline-block w-auto"
+                          src={chapter.src}
+                          alt=""
+                        />
+
                       </div>
-                      <h3 className={darkTheme ? "text-white" : ""}>
-                        {chapter.title}
-                      </h3>
-                      <p
-                        className={"mb-0 " + (darkTheme ? "text-white-50" : "")}
-                      >
-                        {chapter.content}
-                      </p>
+                      <div>
+                        <h3 className={darkTheme ? "text-white" : ""}>
+                          {chapter.title}
+                        </h3>
+                        <p
+                          className={"mb-0 " + (darkTheme ? "text-white-50" : "")}
+                        >
+                          {chapter.content}
+                        </p>
+                      </div>
                     </div>
                   </div>
                 ))}
