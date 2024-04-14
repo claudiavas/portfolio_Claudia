@@ -4,6 +4,15 @@ import { Link } from "react-scroll";
 
 const Header = ({ classicHeader, darkTheme, homeRef, handleNavClick }) => {
   const [isNavModalClose, setIsNavModalClose] = useState(true);
+
+  const menuOptions = [
+    { text: "Home", to: "home" },
+    { text: "About Me", to: "about" },
+    { text: "Skills", to: "skills" },
+    { text: "Portfolio", to: "portfolio" },
+    { text: "Contact", to: "contact" }
+  ];
+
   return (
     <header id="header" className="sticky-top">
       {/* Navbar */}
@@ -21,7 +30,7 @@ const Header = ({ classicHeader, darkTheme, homeRef, handleNavClick }) => {
               setIsNavModalClose(true);
             }}
           >
-            <div styles={{justifyItems: "center"}}>
+            <div styles={{ justifyItems: "center" }}>
               <span className="bg-dark-2 rounded-pill p-2 mb-lg-1 d-none d-lg-inline-block">
                 <img
                   className="img-fluid rounded-pill d-block"
@@ -46,95 +55,28 @@ const Header = ({ classicHeader, darkTheme, homeRef, handleNavClick }) => {
             }
           >
             <ul className="navbar-nav text-lg-center my-lg-auto py-lg-3">
-              <li className="nav-item">
-                <Link
-                  target={homeRef}
-                  className="nav-link "
-                  smooth
-                  duration={500}
-                  style={{ cursor: "pointer" }}
-                  activeClass="active"
-                  spy
-                  to="home"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    setIsNavModalClose(true);
-                  }}
-                >
-                  Home
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link
-                  className="nav-link "
-                  smooth
-                  duration={500}
-                  style={{ cursor: "pointer" }}
-                  activeClass="active"
-                  spy
-                  to="about"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    setIsNavModalClose(true);
-                  }}
-                >
-                  About Me
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link
-                  className="nav-link "
-                  smooth
-                  duration={500}
-                  style={{ cursor: "pointer" }}
-                  activeClass="active"
-                  spy
-                  to="skills"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    setIsNavModalClose(true);
-                  }}
-                >
-                  Skills
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link
-                  className="nav-link "
-                  smooth
-                  duration={500}
-                  style={{ cursor: "pointer" }}
-                  activeClass="active"
-                  spy
-                  to="portfolio"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    setIsNavModalClose(true);
-                  }}
-                >
-                  Portfolio
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link
-                  className="nav-link "
-                  smooth
-                  duration={500}
-                  style={{ cursor: "pointer" }}
-                  activeClass="active"
-                  spy
-                  to="contact"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    setIsNavModalClose(true);
-                  }}
-                >
-                  Contact
-                </Link>
-              </li>
+              {menuOptions.map((option, index) => (
+                <li key={index} className="nav-item">
+                  <Link
+                    className="nav-link"
+                    smooth
+                    duration={500}
+                    style={{ cursor: "pointer" }}
+                    activeClass="active"
+                    spy
+                    to={option.to}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      setIsNavModalClose(true);
+                    }}
+                  >
+                    {option.text}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
-          <ul className="social-icons social-icons-muted social-icons-sm mt-lg-auto ms-auto ms-lg-0 d-flex">
+          <ul className="social-icons social-icons-muted social-icons-sm mt-lg-auto ms-auto ms-lg-0 d-flex mb-4">
             <li className="social-icons-linkedin">
               <Tooltip text="Linkedin" placement="top">
                 <a
