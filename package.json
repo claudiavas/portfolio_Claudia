@@ -13,7 +13,7 @@
     "react": "^18.2.0",
     "react-countup": "^6.3.1",
     "react-dom": "^18.2.0",
-    "react-scripts": "5.0.1",
+    "react-scripts-dependencies-upgraded": "^1.6.2",
     "react-scroll": "^1.8.9",
     "react-slick": "^0.29.0",
     "react-toastify": "^9.0.8",
@@ -23,17 +23,17 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "react-scripts-dependencies-upgraded start",
+    "build": "react-scripts-dependencies-upgraded build",
+    "test": "react-scripts-dependencies-upgraded test",
+    "eject": "react-scripts-dependencies-upgraded eject"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
+  // "eslintConfig": {
+  //   "extends": [
+  //     "react-app",
+  //     "react-app/jest"
+  //   ]
+  // },
   "browserslist": {
     "production": [
       ">0.2%",

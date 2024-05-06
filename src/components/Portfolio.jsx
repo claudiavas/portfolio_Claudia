@@ -17,23 +17,19 @@ const Portfolio = ({ classicHeader, darkTheme }) => {
 
   const projectsData = [
     {
-      title: "Project Title 1",
+      title: "Domus",
       projectInfo:
-        "Quidam lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure. Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
-      client: "Ruby Clinton",
-      technologies: "iOS, HTML5, CSS3, PHP, Java",
-      industry: "Art & Design",
-      date: "July 16, 2019",
+        "Domus is a real estate platform that connects buyers and sellers. It is a full-stack web application that allows users to search for properties, view property details, and contact the seller. The application also allows sellers to list their properties for sale. The application is built using Reactjs, Nodejs, Express, and MongoDB.",
+      client: "personal",
+      technologies: "HTML5, CSS3, Reactjs, Material UI, Nodejs, Express, MongoDB, SendinBlue, Cloudinary",
+      industry: "Web Development",
+      date: "July, 2023",
       url: {
         name: "www.example.com",
         link: "https://www.example.com",
       },
       socialLinks: {
-        facebook: "http://www.facebook.com/",
-        twitter: "http://www.twitter.com/",
-        google: "http://www.google.com/",
-        instagram: "http://www.instagram.com/",
-        mail: "mailto:example@gmail.com",
+        github: "http://www.facebook.com/",
       },
       thumbImage: "images/projects/project-1.jpg",
       sliderImages: [
