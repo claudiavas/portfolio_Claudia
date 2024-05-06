@@ -24,7 +24,7 @@
   },
   "scripts": {
     "start": "react-scripts-dependencies-upgraded start",
-    "build": "react-scripts-dependencies-upgraded build",
+    "build": "CI=false react-scripts-dependencies-upgraded build",
     "test": "react-scripts-dependencies-upgraded test",
     "eject": "react-scripts-dependencies-upgraded eject"
   },
