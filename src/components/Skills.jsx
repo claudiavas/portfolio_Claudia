@@ -5,54 +5,135 @@ const Skills = ({ classicHeader, darkTheme }) => {
 
   const languages = [
     {
-      name: "Spanish",
+      name: "Spanish (Native)",
       percent: 100,
     },
     {
-      name: "English",
-      percent: 90,
+      name: "English (C1 Advanced)",
+      percent: 95,
     },
   ]
 
+  const ai = [
+    {
+      name: "Claude API",
+      percent: 90,
+    },
+    {
+      name: "MCP (Model Context Protocol)",
+      percent: 85,
+    },
+    {
+      name: "LLM Integrations",
+      percent: 80,
+    },
+    {
+      name: "Prompt Engineering",
+      percent: 85,
+    },
+  ];
+
+  const crm = [
+    {
+      name: "Zoho CRM",
+      percent: 95,
+    },
+    {
+      name: "Zoho One Ecosystem",
+      percent: 90,
+    },
+    {
+      name: "Deluge (Automation)",
+      percent: 85,
+    },
+    {
+      name: "Webhooks & REST APIs",
+      percent: 80,
+    },
+    {
+      name: "RevOps & Workflow Design",
+      percent: 90,
+    },
+    {
+      name: "AI/LLM Integrations",
+      percent: 80,
+    },
+  ];
+
   const frontend = [
     {
-      name: "HTML/CSS",
+      name: "React JS",
+      percent: 85,
+    },
+    {
+      name: "Next.js",
       percent: 80,
+    },
+    {
+      name: "TypeScript",
+      percent: 75,
     },
     {
       name: "JavaScript",
-      percent: 70,
+      percent: 85,
     },
     {
-      name: "React JS",
-      percent: 70,
-    },
-    {
-      name: "Next Js",
-      percent: 70,
-    },
-    {
-      name: "Material UI",
-      percent: 80,
+      name: "HTML/CSS",
+      percent: 85,
     },
     {
       name: "Bootstrap",
-      percent: 60,
+      percent: 75,
     },
   ];
 
   const backend = [
     {
-      name: "NodeJs",
+      name: "Node.js",
+      percent: 80,
+    },
+    {
+      name: "Express.js",
+      percent: 80,
+    },
+    {
+      name: "MongoDB",
+      percent: 75,
+    },
+    {
+      name: "PHP",
       percent: 70,
     },
     {
-      name: "Express",
+      name: "SQLite",
+      percent: 75,
+    },
+  ];
+
+  const tools = [
+    {
+      name: "Docker",
       percent: 70,
     },
     {
-      name: "Mongo DB",
-      percent: 70,
+      name: "Git & GitHub",
+      percent: 90,
+    },
+    {
+      name: "Agile & Scrum",
+      percent: 90,
+    },
+    {
+      name: "Kanban",
+      percent: 85,
+    },
+    {
+      name: "Zoho Sprints",
+      percent: 85,
+    },
+    {
+      name: "Notion & Project Management",
+      percent: 85,
     },
   ];
 
@@ -95,6 +176,82 @@ const Skills = ({ classicHeader, darkTheme }) => {
         <div className="row gx-5">
           {languages.length > 0 &&
             languages.map((skill, index) => (
+              <div key={index} className="col-md-6">
+                <p
+                  className={
+                    " fw-500 text-start mb-2 " +
+                    (darkTheme ? "text-light" : "text-dark")
+                  }
+                >
+                  {skill.name}{" "}
+                  <span className="float-end">{skill.percent}%</span>
+                </p>
+                <div
+                  className={
+                    "progress progress-sm mb-4 " + (darkTheme ? "bg-dark" : "")
+                  }
+                >
+                  <div
+                    className="progress-bar"
+                    role="progressbar"
+                    style={{ width: skill.percent + "%" }}
+                    aria-valuenow={skill.percent}
+                    aria-valuemin={0}
+                    aria-valuemax={100}
+                  />
+                </div>
+              </div>
+            ))}
+        </div>
+         {/* IA & LLM Skills */}
+         <h2
+          className={
+            "text-6 fw-600 mt-4 mb-4 " + (darkTheme ? "text-white" : "")
+          }
+        >
+          IA & LLM
+        </h2>
+        <div className="row gx-5">
+          {ai.length > 0 &&
+            ai.map((skill, index) => (
+              <div key={index} className="col-md-6">
+                <p
+                  className={
+                    " fw-500 text-start mb-2 " +
+                    (darkTheme ? "text-light" : "text-dark")
+                  }
+                >
+                  {skill.name}{" "}
+                  <span className="float-end">{skill.percent}%</span>
+                </p>
+                <div
+                  className={
+                    "progress progress-sm mb-4 " + (darkTheme ? "bg-dark" : "")
+                  }
+                >
+                  <div
+                    className="progress-bar"
+                    role="progressbar"
+                    style={{ width: skill.percent + "%" }}
+                    aria-valuenow={skill.percent}
+                    aria-valuemin={0}
+                    aria-valuemax={100}
+                  />
+                </div>
+              </div>
+            ))}
+        </div>
+         {/* CRM & Zoho Skills */}
+         <h2
+          className={
+            "text-6 fw-600 mt-4 mb-4 " + (darkTheme ? "text-white" : "")
+          }
+        >
+          CRM & Zoho Ecosystem
+        </h2>
+        <div className="row gx-5">
+          {crm.length > 0 &&
+            crm.map((skill, index) => (
               <div key={index} className="col-md-6">
                 <p
                   className={
@@ -171,6 +328,44 @@ const Skills = ({ classicHeader, darkTheme }) => {
         <div className="row gx-5">
           {backend.length > 0 &&
             backend.map((skill, index) => (
+              <div key={index} className="col-md-6">
+                <p
+                  className={
+                    " fw-500 text-start mb-2 " +
+                    (darkTheme ? "text-light" : "text-dark")
+                  }
+                >
+                  {skill.name}{" "}
+                  <span className="float-end">{skill.percent}%</span>
+                </p>
+                <div
+                  className={
+                    "progress progress-sm mb-4 " + (darkTheme ? "bg-dark" : "")
+                  }
+                >
+                  <div
+                    className="progress-bar"
+                    role="progressbar"
+                    style={{ width: skill.percent + "%" }}
+                    aria-valuenow={skill.percent}
+                    aria-valuemin={0}
+                    aria-valuemax={100}
+                  />
+                </div>
+              </div>
+            ))}
+        </div>
+         {/* Tools & DevOps Skills */}
+         <h2
+          className={
+            "text-6 fw-600 mt-4 mb-4 " + (darkTheme ? "text-white" : "")
+          }
+        >
+          Tools & DevOps
+        </h2>
+        <div className="row gx-5">
+          {tools.length > 0 &&
+            tools.map((skill, index) => (
               <div key={index} className="col-md-6">
                 <p
                   className={
