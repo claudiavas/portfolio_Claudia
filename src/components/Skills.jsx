@@ -33,30 +33,22 @@ const Skills = ({ classicHeader, darkTheme }) => {
     },
   ];
 
-  const crm = [
+  const automation = [
     {
-      name: "Zoho CRM",
+      name: "CRM & Zoho Ecosystem",
+      percent: 90,
+    },
+    {
+      name: "CRM Workflows Automation & Blueprints",
       percent: 95,
     },
     {
-      name: "Zoho One Ecosystem",
-      percent: 90,
+      name: "Custom Automation Scripts",
+      percent: 70,
     },
     {
-      name: "Deluge (Automation)",
-      percent: 85,
-    },
-    {
-      name: "Webhooks & REST APIs",
-      percent: 80,
-    },
-    {
-      name: "RevOps & Workflow Design",
-      percent: 90,
-    },
-    {
-      name: "AI/LLM Integrations",
-      percent: 80,
+      name: "Business Analytics",
+      percent: 95,
     },
   ];
 
@@ -80,6 +72,10 @@ const Skills = ({ classicHeader, darkTheme }) => {
     {
       name: "HTML/CSS",
       percent: 85,
+    },
+    {
+      name: "Material UI",
+      percent: 90,
     },
     {
       name: "Bootstrap",
@@ -241,17 +237,17 @@ const Skills = ({ classicHeader, darkTheme }) => {
               </div>
             ))}
         </div>
-         {/* CRM & Zoho Skills */}
+         {/* Business Operations & Automation Skills */}
          <h2
           className={
             "text-6 fw-600 mt-4 mb-4 " + (darkTheme ? "text-white" : "")
           }
         >
-          CRM & Zoho Ecosystem
+          Business Operations & Automation
         </h2>
         <div className="row gx-5">
-          {crm.length > 0 &&
-            crm.map((skill, index) => (
+          {automation.length > 0 &&
+            automation.map((skill, index) => (
               <div key={index} className="col-md-6">
                 <p
                   className={

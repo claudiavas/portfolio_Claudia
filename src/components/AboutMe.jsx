@@ -69,30 +69,32 @@ const AboutMe = ({ classicHeader, darkTheme }) => {
         {/* Heading end*/}
 
         {/* content start */}
-        <div className="col-lg-11 mx-auto">
+        <div className="row gx-5 gy-5 col-lg-11 mx-auto">
           {chapters.length > 0 &&
             chapters.map((chapter, index) => (
-              <div key={index} className="featured-box style-3 mb-5" style={{ display: "flex", flexDirection: "row", alignItems: "flex-start", gap: "20px" }}>
-                <div
-                  className={
-                    "featured-box-icon text-primary flex-shrink-0" +
-                    (darkTheme ? " bg-dark-1" : " bg-white")
-                  }
+              <div key={index} className="col-md-6">
+                <div className="featured-box style-3" style={{ display: "flex", flexDirection: "row", alignItems: "center", gap: "30px" }}>
+                  <div
+                    className={
+                      "featured-box-icon text-primary flex-shrink-0" +
+                      (darkTheme ? " bg-dark-1" : " bg-white")
+                    }
 
-                >
-                  <img
-                    className="img-fluid d-inline-block w-auto"
-                    src={chapter.src}
-                    alt=""
-                    style={{ maxWidth: "100%", maxHeight: "100%", height: "auto" }}/>
-                </div>
-                <div style={{ flex: 1 }}>
-                  <h3 className={darkTheme ? "text-white" : ""}>
-                    {chapter.title}
-                  </h3>
-                  <p className={"mb-0 " + (darkTheme ? "text-white-50" : "")}>
-                    {chapter.content}
-                  </p>
+                  >
+                    <img
+                      className="img-fluid d-inline-block w-auto"
+                      src={chapter.src}
+                      alt=""
+                      style={{ maxWidth: "100%", maxHeight: "100%", height: "auto" }}/>
+                  </div>
+                  <div style={{ flex: 1 }}>
+                    <h3 className={darkTheme ? "text-white" : ""}>
+                      {chapter.title}
+                    </h3>
+                    <p className={"mb-0 " + (darkTheme ? "text-white-50" : "")}>
+                      {chapter.content}
+                    </p>
+                  </div>
                 </div>
               </div>
             ))}
