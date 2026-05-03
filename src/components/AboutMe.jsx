@@ -72,10 +72,10 @@ const AboutMe = ({ classicHeader, darkTheme }) => {
         <div className="col-lg-11 mx-auto">
           {chapters.length > 0 &&
             chapters.map((chapter, index) => (
-              <div key={index} className="featured-box style-3 mb-5" style={{ display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center"}}>
+              <div key={index} className="featured-box style-3 mb-5" style={{ display: "flex", flexDirection: "row", alignItems: "flex-start", gap: "20px" }}>
                 <div
                   className={
-                    "featured-box-icon text-primary" +
+                    "featured-box-icon text-primary flex-shrink-0" +
                     (darkTheme ? " bg-dark-1" : " bg-white")
                   }
 
@@ -86,7 +86,7 @@ const AboutMe = ({ classicHeader, darkTheme }) => {
                     alt=""
                     style={{ maxWidth: "100%", maxHeight: "100%", height: "auto" }}/>
                 </div>
-                <div>
+                <div style={{ flex: 1 }}>
                   <h3 className={darkTheme ? "text-white" : ""}>
                     {chapter.title}
                   </h3>
