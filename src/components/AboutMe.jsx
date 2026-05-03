@@ -45,7 +45,21 @@ const AboutMe = ({ classicHeader, darkTheme }) => {
       className={"section " + (darkTheme ? "bg-dark-1" : "")}
     >
       <div className={"container " + (classicHeader ? "" : "px-lg-5")}>
-        {/* Heading */}
+        {/* About Me intro section */}
+        <div className="col-lg-10 mx-auto mb-5">
+          <h1 className={"text-16 fw-600 " + (darkTheme ? "text-white" : "")}>
+            Claudia Vásquez
+          </h1>
+          <h2 className={"text-7 fw-500 mb-3 " + (darkTheme ? "text-white" : "")}>
+            CRM & Automation Lead · RevOps & AI Solutions Architect
+          </h2>
+          <p className={"text-5 " + (darkTheme ? "text-white-50" : "")}>
+            Líder técnica estratégica combinando sólida experiencia en operaciones de negocio con desarrollo full stack — posicionada de forma única para conectar estrategia de negocio con ejecución tecnológica. Actualmente arquitecta de ecosistemas CRM entregando impacto empresarial a través de automatización potenciada por IA.
+          </p>
+        </div>
+        {/* About Me intro end */}
+
+        {/* My Journey Heading */}
         <div className="position-relative d-flex text-center mb-5">
           <h2
             className={
@@ -53,7 +67,7 @@ const AboutMe = ({ classicHeader, darkTheme }) => {
               (darkTheme ? "text-muted opacity-1" : "text-light opacity-4")
             }
           >
-            About Me
+            Journey
           </h2>
           <p
             className={
@@ -66,38 +80,47 @@ const AboutMe = ({ classicHeader, darkTheme }) => {
             <span className="heading-separator-line border-bottom border-3 border-primary d-block mx-auto" />
           </p>
         </div>
-        {/* Heading end*/}
+        {/* Journey Heading end*/}
 
         {/* content start */}
-        <div className="row gx-5 gy-5 col-lg-11 mx-auto">
-          {chapters.length > 0 &&
-            chapters.map((chapter, index) => (
-              <div key={index} className="col-md-6">
-                <div className="featured-box style-3" style={{ display: "flex", flexDirection: "row", alignItems: "center", gap: "30px" }}>
+        <div className="col-lg-11 mx-auto">
+          <div style={{ display: "grid", gridTemplateColumns: "25% 75%", gap: "30px", alignItems: "start" }}>
+            {/* Circles column */}
+            <div style={{ display: "flex", flexDirection: "column", gap: "40px", justifyContent: "flex-start" }}>
+              {chapters.length > 0 &&
+                chapters.map((chapter, index) => (
                   <div
+                    key={index}
                     className={
-                      "featured-box-icon text-primary flex-shrink-0" +
+                      "featured-box-icon text-primary flex-shrink-0 " +
                       (darkTheme ? " bg-dark-1" : " bg-white")
                     }
-
+                    style={{ width: "80px", height: "80px", display: "flex", alignItems: "center", justifyContent: "center" }}
                   >
                     <img
                       className="img-fluid d-inline-block w-auto"
                       src={chapter.src}
                       alt=""
-                      style={{ maxWidth: "100%", maxHeight: "100%", height: "auto" }}/>
+                      style={{ maxWidth: "70px", maxHeight: "70px", height: "auto" }}/>
                   </div>
-                  <div style={{ flex: 1 }}>
-                    <h3 className={darkTheme ? "text-white" : ""}>
+                ))}
+            </div>
+
+            {/* Text column */}
+            <div style={{ display: "flex", flexDirection: "column", gap: "40px" }}>
+              {chapters.length > 0 &&
+                chapters.map((chapter, index) => (
+                  <div key={index}>
+                    <h3 className={"text-5 " + (darkTheme ? "text-white" : "")} style={{ marginBottom: "8px" }}>
                       {chapter.title}
                     </h3>
-                    <p className={"mb-0 " + (darkTheme ? "text-white-50" : "")}>
+                    <p className={"text-4 mb-0 " + (darkTheme ? "text-white-50" : "")}>
                       {chapter.content}
                     </p>
                   </div>
-                </div>
-              </div>
-            ))}
+                ))}
+            </div>
+          </div>
         </div>
         {/* content end */}
       </div>

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Tooltip } from "./Tooltip";
 import { Link } from "react-scroll";
+import resumeFile from "../documents/resume.pdf";
 
 const Header = ({ classicHeader, darkTheme, homeRef, handleNavClick }) => {
   const [isNavModalClose, setIsNavModalClose] = useState(true);
@@ -76,6 +77,17 @@ const Header = ({ classicHeader, darkTheme, homeRef, handleNavClick }) => {
               ))}
             </ul>
           </div>
+          <a
+            className="btn btn-outline-primary rounded-pill shadow-none d-block mb-lg-4"
+            href={resumeFile}
+            download
+            style={{ width: "100%", textAlign: "center" }}
+          >
+            Download CV
+            <span className="ms-1">
+              <i className="fas fa-download" />
+            </span>
+          </a>
           <ul className="social-icons social-icons-muted social-icons-sm mt-lg-auto ms-auto ms-lg-0 d-flex mb-4">
             <li className="social-icons-linkedin">
               <Tooltip text="Linkedin" placement="top">
